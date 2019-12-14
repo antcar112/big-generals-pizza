@@ -1,0 +1,69 @@
+/*** Footer ***/
+
+/* Footer - Both */
+footer {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Footer - Main */
+.footer__main {
+  background-color: $dark;
+  color: $white;
+
+  & .footer__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+
+  & .footer__hours {
+    margin: 0;
+    padding: 0;
+
+    & td {
+      font-size: 14px;
+      padding-bottom: 6px;
+
+      &.footer__hours__header {
+        font-size: 18px;
+        padding-bottom: 12px;
+      }
+    }
+
+    & td:first-child {
+      padding-right: 40px;
+    }
+  }
+
+  & .footer__list {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+
+    & a {
+      color: $white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      text-align: right;
+
+      &.footer__list__margin {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+/* Footer - Copyright */
+.copyright {
+  background-color: $white;
+  color: $dark;
+
+  & p {
+    text-align: center;
+    margin-top: 12px;
+  }
+}

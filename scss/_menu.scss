@@ -1,0 +1,227 @@
+/*** Menu Page ***/
+
+/* Hero - Menu */
+.hero-menu {
+  @include container;
+  /* Image Credit: Ivan Torres on Unsplash.com */
+  background-image: url(../images/menu-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 250px;
+  margin-bottom: 30px;
+  border: 10px solid $grey;
+  overflow: hidden;
+
+  &__message {
+    margin: 1.2em auto 0;
+    color: $white;
+    text-shadow: 2px 2px 8px rgba(black, 0.8);
+    font-size: 4em;
+    text-align: center;
+  }
+}
+
+/* Menu Small Button Links */
+.menu-links {
+  height: 80px;
+  margin-bottom: 30px;
+
+  &__nav {
+    @include container;
+    height: 100%;
+
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+
+    @include hover-transition;
+
+    & h2 {
+      font-size: 1.7em;
+      color: $white;
+      line-height: 80px;
+    }
+
+    &--red {
+      background-color: $red;
+    }
+    &--yellow {
+      background-color: $yellow;
+    }
+    &--green {
+      background-color: $green;
+    }
+    &--blue {
+      background-color: $blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $dark;
+    }
+  }
+}
+
+/* Different Menu Sections */
+.menu-section {
+  width: 100%;
+
+  &--grey {
+    background-color: $grey;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 60px;
+      margin-top: -60px;
+      background-color: $white;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 60px;
+      margin-top: -60px;
+      background-color: $grey;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    font-size: 2.4em;
+    color: $dark;
+    margin-top: 40px;
+    margin-left: 120px;
+    padding-left: 20px;
+    position: relative;
+
+    &--red {
+      @include menu-title($red);
+    }
+    &--yellow {
+      @include menu-title($yellow);
+    }
+    &--green {
+      @include menu-title($green);
+    }
+    &--blue {
+      @include menu-title($blue);
+    }
+  }
+}
+
+/* Grid of Menu Items and Pictures in each Menu Section */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 30px;
+
+  & .menu-item {
+    grid-column: span 3;
+    color: $dark;
+
+    &__header {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 1.5em;
+    }
+
+    &__desc {
+      margin: 1.5em;
+      font-size: 1em;
+    }
+
+    &__price {
+      margin: 4em 2em;
+      text-align: right;
+      opacity: 0.85;
+    }
+  }
+
+  & .menu-fig {
+    margin: 0;
+    padding: 0;
+    grid-row: span 2;
+
+    &__img {
+      border: 10px darken($grey, 5) solid;
+    }
+
+    &__cap {
+      text-align: center;
+      opacity: 0.7;
+      margin-top: 10px;
+      font-weight: 700;
+    }
+
+    &:nth-of-type(odd) {
+      grid-column: 1 / span 2;
+    }
+
+    &:nth-of-type(even) {
+      grid-column: 4 / span 2;
+    }
+  }
+}
+
+/* Return to Top of Page Button */
+.top {
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  padding: 8px 16px;
+
+  background-color: $dark;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out,
+    transform 400ms cubic-bezier(0.61, 1.16, 0.77, 1.15);
+
+  & i {
+    color: $white;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: $white;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $red;
+  }
+
+  &__hidden {
+    transform: translateY(400px);
+  }
+}

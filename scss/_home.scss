@@ -1,0 +1,259 @@
+/*** Home Page ***/
+
+/* Hero - Home Page */
+.hero {
+  @include container;
+  /* Image Credit: Vita Marija Murenaite on Unsplash.com */
+  background-image: url(../images/home-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  max-height: 500px;
+  margin-bottom: 30px;
+  border: 10px solid $grey;
+  overflow: hidden;
+
+  & .hero__message {
+    margin: 10% auto 0;
+    color: $white;
+    text-shadow: 2px 2px 8px rgba(black, 0.8);
+    font-size: 4em;
+    text-align: center;
+  }
+  & .hero__button {
+    display: inline-block;
+    margin-top: 11%;
+    font-size: 2em;
+    text-decoration: none;
+    color: $red;
+    font-weight: 700;
+    background-color: $white;
+    padding: 0.5em 1.5em;
+    border-radius: 6px;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include hover-transition;
+    box-shadow: 0 0 10px 1px rgba($dark, 0.3);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
+
+/* Small Buttons Section */
+.small-button-container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.small-button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $dark;
+  border-radius: 6px;
+  padding: 0.8em;
+  font-size: 1.8em;
+  @include hover-transition;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $dark;
+    color: $white;
+  }
+}
+
+.small-button-green {
+  background-color: $green;
+}
+
+.small-button-yellow {
+  background-color: $yellow;
+}
+
+.img-button-container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+/* Image Button Section */
+.img-button {
+  width: 100%;
+  display: block;
+  text-align: center;
+
+  margin-right: 30px;
+  @include hover-transition;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 40vh;
+  max-height: 380px;
+  border: 10px solid $grey;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-pizza {
+    /* Image Credit: Peter Bravo de los Rios on Unsplash.com */
+    background-image: url(../images/pizza.jpg);
+  }
+
+  &-wings {
+    /* Image Credit: Sabrina Snyder on https://dinnerthendessert.com/buffalo-wings/ */
+    background-image: url(../images/wings.jpg);
+  }
+
+  &-salad {
+    /* Image Credit: Monika Grabkowska on Unsplash.com */
+    background-image: url(../images/salad.jpg);
+  }
+
+  & .img-button__title {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark, 0.6);
+    opacity: 0;
+    @include hover-transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+      font-size: 2.5em;
+      color: $white;
+      @include hover-transition;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+/* Circle Header Section for Resos */
+.circle__container {
+  width: 100%;
+  background-color: $white;
+  position: relative;
+  margin-bottom: 130px;
+  height: 230px;
+}
+
+.circle__circle {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+
+  background-color: $red;
+}
+
+.circle__header {
+  text-align: center;
+  color: $white;
+  font-size: 2.3em;
+  line-height: 1.8em;
+  position: relative;
+  top: 20%;
+}
+
+/* Reservation Section w/ Form */
+.reso {
+  width: 100%;
+  background-color: $grey;
+  position: relative;
+
+  & .reso__container {
+    @include container;
+    padding: 30px 0;
+  }
+
+  & .reso__form {
+    width: 80%;
+
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-gap: 30px;
+
+    & label {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 0.4em;
+      margin-left: 0.5em;
+    }
+
+    & .reso__form-date {
+      margin: 0;
+      padding: 0.5em;
+    }
+    & input,
+    & select {
+      width: 100%;
+      font-size: 1.2em;
+      padding: 0 0.5em;
+      font-family: $font-body;
+      background-color: $dark;
+      border: 4px $grey solid;
+      border-radius: 6px;
+      color: $grey;
+      line-height: 1em;
+      height: 3.2em;
+      transition: border 150ms ease-in-out;
+
+      &:focus {
+        border: 4px rgba($red, 1) solid;
+        outline: none;
+      }
+    }
+
+    & .reso__text-container {
+      width: 100%;
+      grid-column: span 3;
+    }
+
+    & .reso__third-container {
+      width: 100%;
+      grid-column: span 2;
+    }
+
+    & .form__submit {
+      grid-column: 2 / span 4;
+      @include hover-transition;
+      margin: 30px 0 50px;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $red;
+        border: 4px $grey solid;
+      }
+    }
+  }
+}
