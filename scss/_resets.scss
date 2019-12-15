@@ -1,47 +1,51 @@
 /**** Resets ****/
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 /*** Global ****/
 
 main {
-  /* Nudges content down, needed for fixed header */
-  margin-top: 90px;
+	/* Nudges content down, needed for fixed header */
+	margin-top: 90px;
+
+	@media screen and (max-width: $break-md) {
+		margin-top: 30px;
+	}
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 body {
-  margin: 0;
-  font-family: $font-body;
+	margin: 0;
+	font-family: $font-body;
 }
 
 h1 {
-  font-family: $font-heading;
+	font-family: $font-heading;
 }
 
 h2,
 h3 {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 p {
-  line-height: 1.4;
+	line-height: 1.4;
 }
