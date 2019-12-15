@@ -1,4 +1,4 @@
-#Pizza Restaurant Site
+#Big General's Pizza Restaurant Site
 
 Practice website for a Pizza Restaurant.
 
