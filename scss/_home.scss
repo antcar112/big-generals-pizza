@@ -10,7 +10,7 @@
 	background-position: center;
 	height: 60vh;
 	max-height: 500px;
-	margin-bottom: 30px;
+	margin: 90px auto 30px;
 	border: 10px solid $grey;
 	overflow: hidden;
 	display: flex;
@@ -20,7 +20,7 @@
 	@media screen and (max-width: $break-md) {
 		border: none;
 		max-height: none;
-		margin-bottom: 0;
+		margin: 0 auto;
 	}
 
 	& .hero__message {
@@ -133,7 +133,7 @@
 	justify-content: space-between;
 	margin-bottom: 0;
 
-	@media screen and (max-width: $break-sm) {
+	@media screen and (max-width: $break-md) {
 		flex-direction: column;
 	}
 }
@@ -153,10 +153,12 @@
 	max-height: 380px;
 	border: 10px solid $grey;
 
-	@media screen and (max-width: $break-md) {
+	@media screen and (max-width: $break-lg) {
 		margin-right: 0;
 		border: none;
-		max-height: 220px;
+	}
+	@media screen and (max-width: $break-md) {
+		max-height: 200px;
 	}
 
 	&:last-child {
@@ -190,13 +192,17 @@
 		align-items: center;
 		justify-content: center;
 
+		@media screen and (max-width: $break-md) {
+			opacity: 1;
+		}
+
 		& h2 {
 			font-size: 2.5em;
 			color: $white;
 			@include hover-transition;
 
 			@media screen and (max-width: $break-md) {
-				font-size: 2em;
+				font-size: 1.6em;
 			}
 		}
 

@@ -1,7 +1,7 @@
 # Big General's Pizza Restaurant Site
 
-Practice website for a Pizza Restaurant.
+This is a simple practice website made for a fictional Pizza Restaurant.
 
-Made use of HTML, CSS and some basic JavaScript
+This project made use of HTML, CSS, Sass and some basic JavaScript.
 
 ![Site Screenshot](./github-image.jpg)
